@@ -9,7 +9,8 @@ public class Principal {
 		Scanner sc = new Scanner(System.in);
 		String aux;
 		int op;
-		
+		double a,b;
+		Calculadora calculadora = new Calculadora();
 		do {
 			System.out.println("""
 					0-Salir
@@ -20,6 +21,18 @@ public class Principal {
 					""");
 			aux = sc.nextLine();
 			op = Integer.parseInt(aux);
+			switch(op) {
+			case 1:
+				
+				System.out.println("Dime dos numeros");
+				aux = sc.nextLine();
+				a = Double.parseDouble(aux);
+				b = Double.parseDouble(aux);
+				
+				calculadora.suma(a, b);
+				
+				break;
+			}
 			
 		}while(op!=0);
 	}
