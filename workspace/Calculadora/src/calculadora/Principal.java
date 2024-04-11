@@ -5,11 +5,11 @@ import java.util.Scanner;
 public class Principal {
 
 	public static void main(String[] args) {
-		
+
 		Scanner sc = new Scanner(System.in);
 		String aux;
 		int op;
-		double a,b;
+		double a, b;
 		Calculadora calculadora = new Calculadora();
 		do {
 			System.out.println("""
@@ -21,20 +21,31 @@ public class Principal {
 					""");
 			aux = sc.nextLine();
 			op = Integer.parseInt(aux);
-			switch(op) {
+			switch (op) {
 			case 1:
-				
+
 				System.out.println("Dime dos numeros");
 				aux = sc.nextLine();
 				a = Double.parseDouble(aux);
 				b = Double.parseDouble(aux);
-				
+
 				calculadora.suma(a, b);
-				
+
+				break;
+
+			case 2:
+
+				System.out.println("Dime dos numeros");
+				aux = sc.nextLine();
+				a = Double.parseDouble(aux);
+				b = Double.parseDouble(aux);
+
+				calculadora.resta(a, b);
+
 				break;
 			}
-			
-		}while(op!=0);
+
+		} while (op != 0);
 	}
 
 }
