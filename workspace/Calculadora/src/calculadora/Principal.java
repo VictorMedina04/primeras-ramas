@@ -53,6 +53,16 @@ public class Principal {
 				calculadora.multiplicacion(a, b);
 
 				break;
+			case 4:
+
+				System.out.println("Dime dos numeros");
+				aux = sc.nextLine();
+				a = Double.parseDouble(aux);
+				b = Double.parseDouble(aux);
+
+				calculadora.division(a, b);
+
+				break;
 			}
 
 		} while (op != 0);
